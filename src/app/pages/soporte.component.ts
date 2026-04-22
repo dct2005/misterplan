@@ -1,46 +1,103 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-soporte',
   standalone: true,
-  imports: [RouterLink],
   template: `
-    <div class="page-container" style="padding-top: 100px; padding-bottom: 80px;">
-      <div class="container animate-fade-in-up">
-        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Centro de <span class="text-gradient">Soporte</span></h1>
-        <p class="text-muted" style="font-size: 1.2rem; max-width: 700px; margin-bottom: 3rem;">
-          Estamos aquí para ayudarte. Accede a nuestra base de conocimientos, abre un ticket de asistencia técnica o contacta con tu gestor asignado.
-        </p>
+    <div class="page-container relative-overflow" style="padding-top: 140px; padding-bottom: 100px;">
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-          <div class="glass" style="padding: 2rem; border-radius: var(--radius-md); background: var(--bg-secondary);">
-            <div style="font-size: 2rem; margin-bottom: 1rem;">💻</div>
-            <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Soporte Remoto para Windows</h2>
-            <p class="text-muted">Descarga nuestro cliente de TeamViewer para que nuestros técnicos puedan ayudarte conectándose a tu equipo de forma segura.</p>
-            <a href="https://www.reservaonline.support/temp/TeamViewerQS.exe" target="_blank" class="btn btn-primary" style="margin-top: 1.5rem; background: var(--text-main); color: var(--bg-secondary); border-radius: var(--radius-pill); font-weight: 600; text-decoration: none; display: inline-block; padding: 0.8rem 1.5rem;">Descargar (Windows)</a>
+
+      <div class="container animate-fade-in-up relative-z">
+        <!-- Hero Header -->
+        <div class="text-center mb-5">
+          <div class="badge-premium">Customer Support</div>
+          <h1 class="prm-title">Centro de <span class="text-gradient">Soporte y Ayuda</span></h1>
+          <p class="prm-subtitle">
+            Estamos aquí para impulsarte. Accede a herramientas de asistencia remota, manuales y atención técnica directa.
+          </p>
+        </div>
+
+        <div class="grid-soporte-bento">
+          <!-- Windows Card -->
+          <div class="bento-card group">
+
+            <div class="bento-content">
+              <span class="bento-tag">Windows OS</span>
+              <h3>Soporte Remoto Windows</h3>
+              <p>Descarga TeamViewer QuickSupport para asistencia inmediata de nuestros técnicos.</p>
+              <div class="bento-footer">
+                <a href="https://www.reservaonline.support/temp/TeamViewerQS.exe" target="_blank" class="prm-btn-primary" style="width: 100%; text-align: center; text-decoration: none; border: none; cursor: pointer;">Descargar (.exe)</a>
+              </div>
+            </div>
           </div>
-          <div class="glass" style="padding: 2rem; border-radius: var(--radius-md); background: var(--bg-secondary);">
-            <div style="font-size: 2rem; margin-bottom: 1rem;">🍏</div>
-            <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Soporte Remoto para Mac</h2>
-            <p class="text-muted">Si utilizas entorno macOS, descarga nuestro software remoto optimizado para asistencia directa con el equipo técnico.</p>
-             <a href="https://download.teamviewer.com/download/version_13x/TeamViewerQS.dmg" target="_blank" class="btn btn-primary" style="margin-top: 1.5rem; background: var(--text-main); color: var(--bg-secondary); border-radius: var(--radius-pill); font-weight: 600; text-decoration: none; display: inline-block; padding: 0.8rem 1.5rem;">Descargar (Mac)</a>
+
+          <!-- Mac Card -->
+          <div class="bento-card group">
+
+            <div class="bento-content">
+              <span class="bento-tag">macOS</span>
+              <h3>Soporte Remoto Mac</h3>
+              <p>Software optimizado para entorno Mac para una conexión segura con el equipo técnico.</p>
+              <div class="bento-footer">
+                 <a href="https://download.teamviewer.com/download/version_13x/TeamViewerQS.dmg" target="_blank" class="prm-btn-primary" style="width: 100%; text-align: center; text-decoration: none; background: #333; border: none; cursor: pointer;">Descargar (.dmg)</a>
+              </div>
+            </div>
           </div>
-          <div class="glass" style="padding: 2rem; border-radius: var(--radius-md); background: var(--bg-secondary);">
-             <div style="font-size: 2rem; margin-bottom: 1rem;">📖</div>
-            <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Centro de Ayuda y FAQ</h2>
-            <p class="text-muted">Aprende al máximo sobre el Channel Manager, motor de reservas y PMS mediante nuestros tutoriales interactivos y manuales.</p>
-            <a routerLink="/tutoriales" class="btn btn-primary" style="margin-top: 1.5rem; background: var(--border-subtle); color: var(--text-main); border: none; text-decoration: none; display: inline-block; padding: 0.8rem 1.5rem; border-radius: var(--radius-pill);">Ver Tutoriales</a>
+
+          <!-- Documentation Wide -->
+          <div class="bento-card bento-wide group">
+            <div class="bento-img" style="background-image: url('/images/registro-viajeros-misterplan.jpg')"></div>
+            <div class="bento-overlay"></div>
+
+            <div class="bento-content">
+              <span class="bento-tag">Self-Service</span>
+              <h3>Centro de Conocimiento</h3>
+              <p>Resuelve tus dudas al instante con nuestros manuales detallados sobre Channel Manager, Motor de Reservas y PMS.</p>
+              <a href="/tutoriales" class="btn-minimal">Ver Artículos &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Direct Help Large -->
+          <div class="bento-card bento-lg group">
+            <div class="bento-content text-center" style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
+              <span class="bento-tag mx-auto">Urgent Assistance</span>
+              <h3>¿Necesitas ayuda inmediata?</h3>
+              <p>Llámanos a nuestro número de soporte centralizado disponible de Lunes a Viernes.</p>
+              <div class="phone-display mt-4">
+                <a href="tel:+34902100200">+34 902 100 200</a>
+              </div>
+              <p class="mt-3" style="font-size: 0.8rem; opacity: 0.6;">* El coste de la llamada depende de su operador habitual.</p>
+            </div>
           </div>
         </div>
 
-        <div style="margin-top: 5rem; text-align: center; background: var(--bg-secondary); padding: 3rem; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle);">
-            <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">¿Necesitas ayuda inmediata?</h3>
-            <p class="text-muted" style="margin-bottom: 2rem;">Contáctanos directamente en nuestro número de soporte técnico centralizado.</p>
-            <a href="tel:+34902100200" style="font-size: 2rem; font-weight: 700; color: var(--text-main); text-decoration: none;">+34 902 100 200</a>
-        </div>
       </div>
     </div>
-  `
+  `,
+  styles: [`
+    .grid-soporte-bento {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(280px, auto);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+    .orb-2 { background: radial-gradient(circle, #ef4444, transparent); }
+    .bento-lg { grid-column: span 2; grid-row: span 2; }
+    .bento-wide { grid-column: span 2; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+
+    .phone-display { font-size: 2.5rem; font-weight: 800; letter-spacing: -2px; }
+    .phone-display a { color: var(--primary-color); text-decoration: none; }
+
+    @media (max-width: 1100px) {
+      .grid-soporte-bento { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      .grid-soporte-bento { grid-template-columns: 1fr; }
+      .bento-lg, .bento-wide { grid-column: span 1; grid-row: span 1; }
+      .phone-display { font-size: 1.8rem; }
+    }
+  `]
 })
 export class SoporteComponent {}

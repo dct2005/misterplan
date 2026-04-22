@@ -1,43 +1,149 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-alojamientos',
   standalone: true,
+  imports: [RouterLink],
   template: `
-    <div class="page-container" style="padding-top: 100px; padding-bottom: 80px;">
-      <div class="container animate-fade-in-up">
-        <!-- SEO friendly H1 specific for this Silo -->
-        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Software para Gestión de <span class="text-gradient">Hoteles y Alojamientos</span></h1>
-        <p class="text-muted" style="font-size: 1.2rem; max-width: 700px; margin-bottom: 3rem;">
-          Descubre el PMS y Channel Manager más completo del mercado. Sincroniza tus reservas de Booking, Expedia y Airbnb automáticamente y gestiona tu recepción desde la nube.
-        </p>
+    <div class="page-container relative-overflow" style="padding-top: 140px; padding-bottom: 100px;">
 
-        <img src="/images/ira-software-para-gestion-de-hoteles-y-alojamientos.jpg" alt="Gestión de Hoteles y Alojamientos" style="width: 100%; height: 350px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: 3rem; box-shadow: 0 15px 30px rgba(0,0,0,0.08);">
 
-        <h2 style="font-size: 2rem; margin-bottom: 2rem; font-weight: bold;">Soluciones Específicas</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-          <a href="/mrp-hotel" class="glass group" style="padding: 2rem; border-radius: var(--radius-md); background: var(--bg-secondary); text-decoration: none; color: inherit; display: block; transition: transform 0.3s ease;">
-            <img src="/images/motor-PMS-channelmanager-hotel.jpg" alt="MRP Hotel" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 1rem;">
-            <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main);">MRP-HOTEL</h2>
-            <p class="text-muted">La solución completa en la nube para grandes hoteles y cadenas hoteleras. Control total desde facturación hasta limpieza.</p>
-          </a>
-          <a href="/mrp-spa" class="glass group" style="padding: 2rem; border-radius: var(--radius-md); background: var(--bg-secondary); text-decoration: none; color: inherit; display: block; transition: transform 0.3s ease;">
-             <img src="/images/821.jpg" alt="Thermas & SPA" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 1rem;">
-            <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main);">Thermas & SPA</h2>
-            <p class="text-muted">Gestión avanzada de cabinas, terapeutas y bonos. Optimizado para balnearios y centros wellness.</p>
-          </a>
-          <a href="/mrp-casa-rural" class="glass group" style="padding: 2rem; border-radius: var(--radius-md); background: var(--bg-secondary); text-decoration: none; color: inherit; display: block; transition: transform 0.3s ease;">
-            <img src="/images/741.jpg" alt="Casas Rurales" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 1rem;">
-            <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main);">Casas Rurales</h2>
-            <p class="text-muted">Sistema especializado para el alquiler completo o por habitaciones de casas rurales, masías y apartamentos vacacionales.</p>
-          </a>
+      <div class="container animate-fade-in-up relative-z">
+        <!-- Hero Header -->
+        <div class="text-center mb-5">
+          <div class="badge-premium">PMS & Channel Manager</div>
+          <h1 class="prm-title">Soluciones para <span class="text-gradient">Todo Tipo de Alojamiento</span></h1>
+          <p class="prm-subtitle">
+            Desde hoteles de 5 estrellas hasta acogedoras casas rurales. El ecosistema Misterplan se adapta a la escala y necesidades únicas de tu establecimiento.
+          </p>
         </div>
 
-        <div style="margin-top: 4rem; text-align: center;">
-          <button class="btn btn-primary btn-lg">Probar PMS Gratis</button>
+        <!-- Bento Grid for Alojamientos -->
+        <div class="grid-alojamientos-bento">
+          <!-- MRP-HOTEL (Main Card) -->
+          <div class="bento-card bento-lg group" [routerLink]="['/mrp-hotel']">
+            <div class="bento-img" style="background-image: url('/images/motor-PMS-channelmanager-hotel.jpg')"></div>
+            <div class="bento-overlay"></div>
+
+            <div class="bento-content">
+              <span class="bento-tag">Hoteles 4* & 5*</span>
+              <h3>MRP-HOTEL</h3>
+              <p>La solución PMS premium para hoteles que requieren control absoluto de operaciones, facturación avanzada y limpieza.</p>
+              <div class="bento-footer">
+                <span class="btn-minimal">Ver especificaciones &rarr;</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- MRP-SUPERHOTEL (Hotels with SPA) -->
+          <div class="bento-card group" [routerLink]="['/mrp-spa']">
+            <div class="bento-img" style="background-image: url('/images/pms-motor-channel-spa-hotel.jpg')"></div>
+            <div class="bento-overlay"></div>
+
+            <div class="bento-content">
+              <h3>MRP-SUPERHOTEL</h3>
+              <p>Diseñado para hoteles con SPA y servicios de resort integrados.</p>
+              <span class="btn-minimal">Explorar &rarr;</span>
+            </div>
+          </div>
+
+          <!-- MRP-CASA RURAL -->
+          <div class="bento-card group" [routerLink]="['/mrp-casa-rural']">
+            <div class="bento-img" style="background-image: url('/images/741.jpg')"></div>
+            <div class="bento-overlay"></div>
+
+            <div class="bento-content">
+              <h3>MRP-CASA RURAL</h3>
+              <p>Sincronización total para el turismo rural y masías.</p>
+              <span class="btn-minimal">Saber más &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Apartamentos Turísticos (Wide) -->
+          <div class="bento-card bento-wide group">
+            <div class="bento-img" style="background-image: url('/images/gestion-comercializacion-apartamento-turistico.jpg')"></div>
+            <div class="bento-overlay"></div>
+
+            <div class="bento-content">
+              <span class="bento-tag">Urbano</span>
+              <h3>Apartamentos Turísticos</h3>
+              <p>Gestión eficiente de carteras de apartamentos multizona desde un único panel centralizado.</p>
+              <span class="btn-minimal">Ver planes &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Alquiler Vacacional -->
+          <div class="bento-card group">
+            <div class="bento-img" style="background-image: url('/images/gestion-alojamiento-vacacional.jpg')"></div>
+            <div class="bento-overlay"></div>
+
+            <div class="bento-content">
+              <h3>Alquiler Vacacional</h3>
+              <p>Potencia tus alquileres de corta estancia con reservas directas.</p>
+              <span class="btn-minimal">Información &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Campings -->
+          <div class="bento-card group">
+            <div class="bento-img" style="background-image: url('/images/4480.jpg')"></div>
+            <div class="bento-overlay"></div>
+
+            <div class="bento-content">
+              <h3>Campings & Glamping</h3>
+              <p>Gestión de parcelas, servicios comunes y control de estancias.</p>
+              <span class="btn-minimal">Configurar &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Solo Channel Manager -->
+          <div class="bento-card bento-wide group">
+            <div class="bento-img" style="background-image: url('/images/channel-manager-para-hoteles-info.jpg')"></div>
+            <div class="bento-overlay"></div>
+
+            <div class="bento-content">
+              <span class="bento-tag">Conectividad</span>
+              <h3>Solo Channel Manager</h3>
+              <p>¿Ya tienes PMS? Conecta tu hotel con más de 100 canales (Booking, Expedia, Airbnb) con la tecnología más rápida del mercado.</p>
+              <span class="btn-minimal">Documentación &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: Value Prop -->
+        <div class="cta-banner-premium mt-5 animate-fade-in-up">
+          <h2>Todos tus canales, una sola señal</h2>
+          <p>Misterplan unifica tu disponibilidad evitando el overbooking para que te centres en lo que importa: tus huéspedes.</p>
+          <div style="display: flex; gap: 1rem; justify-content: center;">
+            <button class="prm-btn-primary">Empezar ahora</button>
+            <button class="prm-btn-text">Ver integraciones</button>
+          </div>
         </div>
       </div>
     </div>
-  `
+  `,
+  styles: [`
+    .grid-alojamientos-bento {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 320px; /* Slight increase for parity with other bento grids */
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+    .orb-2 { background: radial-gradient(circle, #00d4ff, transparent); }
+
+    .bento-lg { grid-column: span 2; grid-row: span 2; }
+    .bento-wide { grid-column: span 2; }
+
+    @media (max-width: 1100px) {
+      .grid-alojamientos-bento { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 250px; }
+    }
+    @media (max-width: 700px) {
+      .grid-alojamientos-bento { grid-template-columns: 1fr; grid-auto-rows: auto; }
+      .bento-lg, .bento-wide { grid-column: span 1; grid-row: span 1; }
+      .bento-card { height: 350px; }
+    }
+  `]
 })
 export class AlojamientosComponent {}

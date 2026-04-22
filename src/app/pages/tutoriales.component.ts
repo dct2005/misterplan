@@ -4,90 +4,104 @@ import { Component } from '@angular/core';
   selector: 'app-tutoriales',
   standalone: true,
   template: `
-    <div class="page-container" style="position: relative; overflow: hidden; padding-top: 120px; padding-bottom: 100px;">
-      <!-- Glowing Background Elements -->
-      <div style="position: absolute; top: -10%; right: -5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(249, 129, 0, 0.1) 0%, transparent 70%); z-index: -1;"></div>
-      <div style="position: absolute; bottom: 0; left: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255, 179, 71, 0.05) 0%, transparent 70%); z-index: -1;"></div>
+    <div class="page-container relative-overflow" style="padding-top: 140px; padding-bottom: 100px;">
 
-      <div class="container animate-fade-in-up">
-        <div style="max-width: 800px; margin-bottom: 4rem;">
-          <h1 style="font-size: 3.5rem; margin-bottom: 1rem; line-height: 1.1;">Academia <span class="text-gradient">Misterplan</span></h1>
-          <p class="text-muted" style="font-size: 1.25rem; line-height: 1.6;">
-            Tu centro de formación especializado para exprimir al máximo el potencial de tu negocio turístico. Videotutoriales, webinars y guías estratégicas.
+
+      <div class="container animate-fade-in-up relative-z">
+        <!-- Hero Header -->
+        <div class="text-center mb-5">
+          <div class="badge-premium">Misterplan Academy</div>
+          <h1 class="prm-title">Centro de <span class="text-gradient">Formación y Ayuda</span></h1>
+          <p class="prm-subtitle">
+            Domina cada herramienta de Misterplan con nuestros videotutoriales paso a paso y guías de configuración experta.
           </p>
         </div>
 
-        <!-- Filter Categories -->
-        <div style="display: flex; gap: 0.8rem; margin-bottom: 4rem; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: none;">
-          <button style="padding: 0.8rem 1.5rem; border-radius: var(--radius-pill); background: var(--text-main); color: var(--bg-secondary); font-weight: 600; white-space: nowrap;">Todos los vídeos</button>
-          <button style="padding: 0.8rem 1.5rem; border-radius: var(--radius-pill); background: var(--bg-secondary); color: var(--text-main); font-weight: 500; border: 1px solid var(--border-subtle); white-space: nowrap;">Alojamientos</button>
-          <button style="padding: 0.8rem 1.5rem; border-radius: var(--radius-pill); background: var(--bg-secondary); color: var(--text-main); font-weight: 500; border: 1px solid var(--border-subtle); white-space: nowrap;">Ocio y Cultura</button>
-          <button style="padding: 0.8rem 1.5rem; border-radius: var(--radius-pill); background: var(--bg-secondary); color: var(--text-main); font-weight: 500; border: 1px solid var(--border-subtle); white-space: nowrap;">Actividades</button>
-          <button style="padding: 0.8rem 1.5rem; border-radius: var(--radius-pill); background: var(--bg-secondary); color: var(--text-main); font-weight: 500; border: 1px solid var(--border-subtle); white-space: nowrap;">Destinos</button>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem;">
-          <!-- Tutorial 1: MIDNI -->
-          <div class="tutorial-card glass" style="border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-secondary); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border-subtle);">
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; background: #000;">
-              <iframe src="https://www.youtube.com/embed/qLNCGgIAdss?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+        <!-- Video Bento Grid -->
+        <div class="grid-video-bento">
+          <!-- Main Tutorial -->
+          <div class="bento-card bento-lg group">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/qLNCGgIAdss?rel=0" allowfullscreen></iframe>
             </div>
-            <div style="padding: 2rem;">
-              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-                <span style="background: rgba(249, 129, 0, 0.1); color: var(--primary-color); padding: 0.3rem 0.8rem; border-radius: var(--radius-pill); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Check-in</span>
-                <span class="text-muted" style="font-size: 0.85rem;">4:40 min</span>
+            <div class="bento-content">
+              <span class="bento-tag">Featured</span>
+              <h3>Check-in con MIDNI</h3>
+              <p>Aprende a automatizar la identificación de huéspedes cumpliendo la normativa española vigente de forma 100% digital.</p>
+              <div class="bento-footer">
+                <span class="btn-minimal">Ver tutorial completo &rarr;</span>
               </div>
-              <h3 style="font-size: 1.5rem; margin-bottom: 0.8rem;">Extraer datos de MIDNI (España)</h3>
-              <p class="text-muted" style="font-size: 1rem; line-height: 1.5;">Aprende cómo aceptar la app MIDNI como método de identificación obligatorio para tus huéspedes de forma rápida y sencilla.</p>
             </div>
           </div>
 
-          <!-- Tutorial 2: Verifactu -->
-          <div class="tutorial-card glass" style="border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-secondary); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border-subtle);">
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; background: #000;">
-              <iframe src="https://www.youtube.com/embed/PIC-rZ-4Ecs?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+          <!-- Secondary Video 1 -->
+          <div class="bento-card group">
+            <div class="video-container small">
+              <iframe src="https://www.youtube.com/embed/PIC-rZ-4Ecs?rel=0" allowfullscreen></iframe>
             </div>
-            <div style="padding: 2rem;">
-              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-                <span style="background: rgba(249, 129, 0, 0.1); color: var(--primary-color); padding: 0.3rem 0.8rem; border-radius: var(--radius-pill); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Legal</span>
-                <span class="text-muted" style="font-size: 0.85rem;">11:20 min</span>
-              </div>
-              <h3 style="font-size: 1.5rem; margin-bottom: 0.8rem;">VERIFACTU: Manual de Uso</h3>
-              <p class="text-muted" style="font-size: 1rem; line-height: 1.5;">Manual paso a paso para manejar Verifactu con Misterplan y cumplir con la normativa de facturación electrónica.</p>
+            <div class="bento-content">
+              <h3>Manual Verifactu</h3>
+              <p>Cumple con la nueva ley de facturación electrónica sin complicaciones técnicas.</p>
             </div>
           </div>
 
-          <!-- Tutorial 3: Grupos -->
-          <div class="tutorial-card glass" style="border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-secondary); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border-subtle);">
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; background: #000;">
-              <iframe src="https://www.youtube.com/embed/yEqGlYaQEZc?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+          <!-- Secondary Video 2 -->
+          <div class="bento-card group">
+            <div class="video-container small">
+              <iframe src="https://www.youtube.com/embed/yEqGlYaQEZc?rel=0" allowfullscreen></iframe>
             </div>
-            <div style="padding: 2rem;">
-              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-                <span style="background: rgba(249, 129, 0, 0.1); color: var(--primary-color); padding: 0.3rem 0.8rem; border-radius: var(--radius-pill); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Gestión</span>
-                <span class="text-muted" style="font-size: 0.85rem;">9:58 min</span>
-              </div>
-              <h3 style="font-size: 1.5rem; margin-bottom: 0.8rem;">Check-in masivo para Grupos</h3>
-              <p class="text-muted" style="font-size: 1rem; line-height: 1.5;">Optimiza la entrada de grandes grupos y albergues con técnicas de carga masiva de datos y autocheckin.</p>
+            <div class="bento-content">
+              <h3>Carga de Grupos</h3>
+              <p>Optimiza la entrada masiva de viajeros en albergues y grandes grupos estacionales.</p>
             </div>
+          </div>
+
+          <!-- Resources Wide -->
+          <div class="bento-card bento-wide group">
+             <div class="bento-img" style="background-image: url('/images/aula-misterplan-formacion.jpg')"></div>
+             <div class="bento-overlay"></div>
+
+             <div class="bento-content">
+               <span class="bento-tag">Full Guide</span>
+               <h3>Documentación Completa</h3>
+               <p>Accede a nuestro manual interactivo con más de 200 artículos detallados sobre gestión hotelera y actividades.</p>
+               <span class="btn-minimal">Abrir Help Center &rarr;</span>
+             </div>
           </div>
         </div>
 
-        <!-- CTA Section -->
-        <div style="margin-top: 6rem; position: relative;">
-          <div class="glass" style="padding: 4rem; border-radius: var(--radius-lg); background: var(--gradient-glow); text-align: center; color: white;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">¿Buscas algo más específico?</h2>
-            <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-              Nuestros expertos están disponibles para realizar demostraciones personalizadas adaptadas a tu flujo de trabajo real.
-            </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-              <a routerLink="/contacto" style="padding: 1rem 2.5rem; border-radius: var(--radius-pill); background: white; color: var(--primary-color); font-weight: 700; font-size: 1.1rem; text-decoration: none;">Solicitar Demo Live</a>
-              <a routerLink="/soporte" style="padding: 1rem 2.5rem; border-radius: var(--radius-pill); border: 1.5px solid rgba(255,255,255,0.5); color: white; font-weight: 600; font-size: 1.1rem; text-decoration: none;">Ir al Soporte</a>
-            </div>
-          </div>
+        <div class="cta-banner-premium mt-5 animate-fade-in-up">
+          <h2>¿Necesitas formación personalizada?</h2>
+          <p>Organizamos webinars semanales gratuitos para que nunca dejes de optimizar tu negocio.</p>
+          <button class="prm-btn-primary">Ver Agenda de Webinars</button>
         </div>
       </div>
     </div>
-  `
+  `,
+  styles: [`
+    .grid-video-bento {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(280px, auto);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+    .orb-2 { background: radial-gradient(circle, #f97316, transparent); }
+    .bento-lg { grid-column: span 2; grid-row: span 2; }
+    .bento-wide { grid-column: span 2; }
+
+    .video-container { position: relative; height: 350px; background: #000; overflow: hidden; border-radius: 20px 20px 0 0; }
+    .video-container.small { height: 180px; }
+    .video-container iframe { position: absolute; width: 100%; height: 100%; border: 0; }
+
+    @media (max-width: 1100px) {
+      .grid-video-bento { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      .grid-video-bento { grid-template-columns: 1fr; }
+      .bento-lg, .bento-wide { grid-column: span 1; grid-row: span 1; }
+      .video-container { height: 250px; }
+    }
+  `]
 })
 export class TutorialesComponent {}

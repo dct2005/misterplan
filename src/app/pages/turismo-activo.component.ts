@@ -4,72 +4,101 @@ import { Component } from '@angular/core';
   selector: 'app-turismo-activo',
   standalone: true,
   template: `
-    <div class="page-container" style="padding-top: 120px; padding-bottom: 80px;">
-      <div class="text-center animate-fade-in-up" style="max-width: 800px; margin: 0 auto 5rem;">
-        <h1 style="font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.05; letter-spacing: -0.03em;">
-          Multiaventura <br><span class="text-gradient">Turismo Activo</span>
-        </h1>
-        <p class="text-muted" style="font-size: 1.25rem; margin-bottom: 2.5rem; line-height: 1.6;">
-          Aumenta la seguridad y rentabilidad de tu empresa. Gestiona turnos de barranquismo, alquiler de equipo de esquí o cupos de kayak cerrando ventas las 24h.
-        </p>
-        <div style="display: flex; gap: 1rem; justify-content: center;">
-          <a href="/contacto" class="btn btn-primary" style="padding: 1rem 2.5rem; border-radius: var(--radius-pill); font-weight: 600;">Saber más</a>
-        </div>
-      </div>
+    <div class="page-container relative-overflow" style="padding-top: 140px; padding-bottom: 100px;">
 
-      <div class="container animate-fade-in-up">
-        <img src="/images/ira-software-para-gestion-de-actividades-turisticas.jpg" alt="Turismo Activo" style="width: 100%; height: 450px; object-fit: cover; border-radius: 24px; box-shadow: 0 25px 50px rgba(0,0,0,0.1); margin-bottom: 8rem;">
-      </div>
 
-      <div class="container">
-        <!-- Feature 1 -->
-        <div class="feature-block inline-layout animate-fade-in-up">
-          <div class="feature-text">
-            <span class="feat-subtitle">CONTROL DE CUPOS EXPERTO</span>
-            <h2>Cierra reservas automáticamente según tu inventario real.</h2>
-            <p>Configura las reglas que ligan tickets con disponibilidad física. ¿Solo tienes 10 cascos? Cuando reserves la plaza número 10 o se queden sin inventario, las ventas online paran solas.</p>
-          </div>
-          <div class="feature-visual">
-            <img src="/images/motor-turismo-activo.jpg" alt="Cupos Activo" class="img-fluid">
-          </div>
+      <div class="container animate-fade-in-up relative-z">
+        <!-- Hero Header -->
+        <div class="text-center mb-5">
+          <div class="badge-premium">Adventure & Sports</div>
+          <h1 class="prm-title">Multiaventura y <span class="text-gradient">Turismo Activo</span></h1>
+          <p class="prm-subtitle">
+            Aumenta la seguridad y rentabilidad de tu empresa. Gestiona turnos de barranquismo, kayak o alquiler de equipo cerrando ventas las 24h.
+          </p>
         </div>
 
-        <!-- Feature 2 -->
-        <div class="feature-block inline-layout reverse animate-fade-in-up">
-          <div class="feature-text">
-            <span class="feat-subtitle">CUADRANTE DE MONITORES</span>
-            <h2>Tus guías ven su carga de trabajo semanal.</h2>
-            <p>Visión gráfica y clara para asignar personal de manera dinámica a cada salida programada. Además, los guías pueden visualizar su agenda directamente en su propio smartphone.</p>
+        <!-- Bento Grid for Turismo Activo -->
+        <div class="grid-silo-bento">
+          <!-- Main Card -->
+          <div class="bento-card bento-lg group">
+            <div class="bento-img" style="background-image: url('/images/motor-turismo-activo.jpg')"></div>
+            <div class="bento-overlay"></div>
+
+            <div class="bento-content">
+              <span class="bento-tag">Active Control</span>
+              <h3>Gestión de Cupos Experto</h3>
+              <p>Configura reglas que ligan tickets con disponibilidad física. Si solo tienes 10 cascos, las ventas paran solas al llegar al límite.</p>
+              <div class="bento-footer">
+                <span class="btn-minimal">Ver inventario &rarr;</span>
+              </div>
+            </div>
           </div>
-          <div class="feature-visual">
-            <img src="/images/motor-empresas-actividades-turisticas.jpg" alt="App Guias" class="img-fluid">
+
+          <!-- Feature 1 -->
+          <div class="bento-card group">
+            <div class="bento-img" style="background-image: url('/images/ira-software-para-gestion-de-actividades-turisticas.jpg')"></div>
+            <div class="bento-overlay"></div>
+
+            <div class="bento-content">
+              <h3>Cuadrante de Guías</h3>
+              <p>Visión gráfica para asignar personal de manera dinámica a cada salida programada.</p>
+              <span class="btn-minimal">Asignar &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="bento-card group">
+            <div class="bento-img" style="background-image: url('/images/motor-empresas-actividades-turisticas.jpg')"></div>
+            <div class="bento-overlay"></div>
+
+            <div class="bento-content">
+              <h3>Seguros y Descargos</h3>
+              <p>Firma digital de descargos de responsabilidad desde el móvil del cliente antes del inicio.</p>
+              <span class="btn-minimal">Info Legal &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Wide Card -->
+          <div class="bento-card bento-wide group">
+            <div class="bento-img" style="background-image: url('/images/4480.jpg')"></div>
+            <div class="bento-overlay"></div>
+
+            <div class="bento-content">
+              <span class="bento-tag">Rental Management</span>
+              <h3>Alquiler de Material Técnico</h3>
+              <p>Controla las entregas y devoluciones de bicicletas, neoprenos o material de esquí con códigos de barras.</p>
+              <span class="btn-minimal">Gestionar Material &rarr;</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="container" style="margin-top: 6rem;">
-         <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 30px; padding: 5rem 3rem; text-align: center; color: white;">
-            <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem;">Vende más aventuras, preocúpate menos.</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">Prueba Misterplan Action durante 14 días con garantía.</p>
-            <button class="btn" style="background: white; color: var(--primary-color); padding: 1rem 2.5rem; border-radius: 50px; font-weight: bold; border: none; cursor: pointer;">Probar Ahora</button>
-         </div>
+        <div class="cta-banner-premium mt-5 animate-fade-in-up">
+          <h2>Lleva tu aventura al siguiente nivel</h2>
+          <p>Misterplan es el partner tecnológico de las empresas de turismo activo líderes en el sector.</p>
+          <button class="prm-btn-primary">Empezar ahora</button>
+        </div>
       </div>
     </div>
   `,
   styles: [`
-    .feature-block { margin-bottom: 8rem; }
-    .inline-layout { display: flex; align-items: center; justify-content: space-between; gap: 4rem; }
-    .inline-layout.reverse { flex-direction: row-reverse; }
-    .feature-text { flex: 1; max-width: 550px; text-align: left; }
-    .feat-subtitle { display: inline-block; font-weight: 700; color: var(--primary-color); letter-spacing: 0.1em; margin-bottom: 1.5rem; font-size: 0.85rem; }
-    .feature-text h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.02em; margin-bottom: 1.5rem; color: var(--text-main); font-weight: 800; line-height: 1.1; }
-    .feature-text p { font-size: 1.15rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 2rem; }
-    .feature-visual { flex: 1; text-align: center; }
-    .img-fluid { max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-    @media (max-width: 900px) {
-      .inline-layout, .inline-layout.reverse { flex-direction: column; text-align: center; gap: 0; }
-      .feature-text { margin-bottom: 3rem; max-width: 100%; text-align: center; }
-      .feature-block { margin-bottom: 5rem; }
+    .grid-silo-bento {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 280px;
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+    .orb-2 { background: radial-gradient(circle, #059669, transparent); }
+    .bento-lg { grid-column: span 2; grid-row: span 2; }
+    .bento-wide { grid-column: span 2; }
+
+    @media (max-width: 1100px) {
+      .grid-silo-bento { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 250px; }
+    }
+    @media (max-width: 700px) {
+      .grid-silo-bento { grid-template-columns: 1fr; grid-auto-rows: auto; }
+      .bento-lg, .bento-wide { grid-column: span 1; grid-row: span 1; }
+      .bento-card { height: 350px; }
     }
   `]
 })

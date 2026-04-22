@@ -140,8 +140,7 @@ import { Component } from '@angular/core';
 
     <!-- Section 6: Info Cards with Aurora Ambient UI -->
     <section class="info-cards-section relative-overflow">
-       <div class="aurora-orb orb-1"></div>
-       <div class="aurora-orb orb-2"></div>
+
        
        <div class="container animate-fade-in-up relative-z">
           <h2 class="section-title text-center" style="margin-bottom: 3rem;">Software Completo y Modular</h2>
@@ -304,26 +303,7 @@ import { Component } from '@angular/core';
     .relative-overflow { position: relative; overflow: hidden; padding: 6rem 0; background: var(--bg-secondary); }
     .relative-z { position: relative; z-index: 5; }
     
-    .aurora-orb {
-       position: absolute; border-radius: 50%;
-       filter: blur(90px); opacity: 0.6; z-index: 1;
-       animation: auroraFloat 8s infinite alternate ease-in-out;
-    }
-    .orb-1 {
-       width: 600px; height: 600px;
-       background: radial-gradient(circle, var(--primary-color), transparent 60%);
-       top: -150px; right: -150px;
-    }
-    .orb-2 {
-       width: 700px; height: 700px;
-       background: radial-gradient(circle, #ff007a, transparent 60%);
-       bottom: -200px; left: -150px;
-       animation-delay: -4s;
-    }
-    @keyframes auroraFloat {
-       0% { transform: translateY(0) scale(1); }
-       100% { transform: translateY(60px) scale(1.1); }
-    }
+
 
     .grid-3-bento {
        display: grid;

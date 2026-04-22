@@ -4,89 +4,104 @@ import { Component } from '@angular/core';
   selector: 'app-novedades',
   standalone: true,
   template: `
-    <div class="page-container" style="padding-top: 100px; padding-bottom: 80px;">
-      <div class="container animate-fade-in-up">
-        <!-- SEO friendly H1 specific for this Silo -->
-        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Novedades y Blog de <span class="text-gradient">Misterplan</span></h1>
-        <p class="text-muted" style="font-size: 1.2rem; max-width: 700px; margin-bottom: 3rem;">
-          Descubre las últimas actualizaciones de la plataforma, consejos de gestión turística y avances del sector.
-        </p>
+    <div class="page-container relative-overflow" style="padding-top: 140px; padding-bottom: 100px;">
 
-        <img src="/images/ayudas-junta-de-extremadura-y-union-europea.jpg" alt="Novedades Misterplan" style="width: 100%; height: 350px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: 3rem; box-shadow: 0 15px 30px rgba(0,0,0,0.08);">
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-          <div class="glass" style="padding: 2rem; border-radius: var(--radius-md); background: var(--bg-secondary);">
-             <img src="/images/4484.jpg" alt="Verifactu" style="width: 100%; border-radius: var(--radius-sm); margin-bottom: 1rem;">
-            <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Actualización PMS 2026</h2>
-            <p class="text-muted">Descubre las nuevas características del Property Management System preparadas para la nueva temporada.</p>
-          </div>
-          <div class="glass" style="padding: 2rem; border-radius: var(--radius-md); background: var(--bg-secondary);">
-            <img src="/images/4461.jpg" alt="Especial Check-in" style="width: 100%; border-radius: var(--radius-sm); margin-bottom: 1rem;">
-            <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Nuevo Registro de Viajeros</h2>
-            <p class="text-muted">Academía: Todo lo que debes saber sobre la normativa y cómo Misterplan te ayuda a automatizar el proceso.</p>
-          </div>
-        </div>
-
-        <!-- Misterplan TV / YouTube Integration Section -->
-        <div style="margin-top: 6rem;">
-          <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Misterplan <span class="text-gradient">TV</span></h2>
-          <p class="text-muted" style="font-size: 1.2rem; max-width: 700px; margin-bottom: 3rem;">
-            Aprende a sacar el máximo partido a tu plataforma con nuestros últimos videotutoriales y webinars guiados por expertos.
+      <div class="container animate-fade-in-up relative-z">
+        <!-- Hero Header -->
+        <div class="text-center mb-5">
+          <div class="badge-premium">Latest Pulse</div>
+          <h1 class="prm-title">Novedades y <span class="text-gradient">Blog de Misterplan</span></h1>
+          <p class="prm-subtitle">
+            Descubre las últimas actualizaciones de la plataforma, consejos de gestión turística y avances del sector tecnológico.
           </p>
+        </div>
 
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-            <!-- YouTube Video 1: Diferenciación -->
-            <div class="glass" style="border-radius: var(--radius-md); overflow: hidden; background: var(--bg-secondary); border: 1px solid var(--border-subtle);">
-              <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-                <iframe src="https://www.youtube.com/embed/U8EGfukpchI?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              <div style="padding: 1.5rem;">
-                <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;">
-                  <span style="color: #FF0000;">▶</span> Si no vendes esto, eres uno más
-                </h3>
-                <p class="text-muted" style="font-size: 0.95rem;">¿Qué quiere tu cliente? ¿Qué compra realmente cuando elige tu alojamiento? Una radiografía del cliente de hoy.</p>
-              </div>
-            </div>
-
-            <!-- YouTube Video 2: Arma de diferenciación -->
-            <div class="glass" style="border-radius: var(--radius-md); overflow: hidden; background: var(--bg-secondary); border: 1px solid var(--border-subtle);">
-              <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-                <iframe src="https://www.youtube.com/embed/biRr_YNo4wQ?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              <div style="padding: 1.5rem;">
-                <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;">
-                  <span style="color: #FF0000;">▶</span> Tu arma de diferenciación
-                </h3>
-                <p class="text-muted" style="font-size: 0.95rem;">Descubre qué es lo único que tú tienes y que ninguna plataforma puede replicar para ser inolvidable.</p>
-              </div>
-            </div>
-
-            <!-- YouTube Video 3: Silencios -->
-            <div class="glass" style="border-radius: var(--radius-md); overflow: hidden; background: var(--bg-secondary); border: 1px solid var(--border-subtle);">
-              <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-                <iframe src="https://www.youtube.com/embed/YTOwjxxgf3I?rel=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              <div style="padding: 1.5rem;">
-                <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;">
-                  <span style="color: #FF0000;">▶</span> Silencios que matan tu negocio
-                </h3>
-                <p class="text-muted" style="font-size: 0.95rem;">¿Qué dice tu servicio al cliente: “sé lo que necesitas” o…“adivina qué está pasando”?</p>
+        <!-- News Bento Grid -->
+        <div class="grid-news-bento">
+          <!-- Main News Card -->
+          <div class="bento-card bento-lg group">
+            <div class="bento-img" style="background-image: url('/images/ayudas-junta-de-extremadura-y-union-europea.jpg')"></div>
+            <div class="bento-overlay"></div>
+            <div class="bento-content">
+              <span class="bento-tag">Announcement</span>
+              <h3>Subvenciones Europa 2026</h3>
+              <p>Misterplan es agente digitalizador oficial. Descubre cómo conseguir hasta 12.000€ para modernizar tu infraestructura turística.</p>
+              <div class="bento-footer">
+                <span class="btn-minimal">Leer más &rarr;</span>
               </div>
             </div>
           </div>
 
-          <div style="margin-top: 3rem; text-align: center;">
-            <a href="https://www.youtube.com/@MisterPlanSistemasdeReservas" target="_blank" style="background: #FF0000; color: #fff; padding: 0.8rem 2rem; border-radius: var(--radius-pill); font-weight: 600; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; box-shadow: 0 4px 14px rgba(255,0,0,0.3);">
-              Suscribirse al Canal
-            </a>
+          <!-- YouTube Video 1 -->
+          <div class="bento-card group">
+            <div class="video-preview-mini">
+              <iframe src="https://www.youtube.com/embed/U8EGfukpchI?rel=0" allowfullscreen></iframe>
+            </div>
+            <div class="bento-content" style="padding-top: 0.5rem;">
+               <span class="bento-tag">Misterplan TV</span>
+               <h3>Diferenciación Real</h3>
+               <p>¿Qué compra realmente tu cliente hoy en día?</p>
+            </div>
+          </div>
+
+          <!-- YouTube Video 2 -->
+          <div class="bento-card group">
+            <div class="video-preview-mini">
+              <iframe src="https://www.youtube.com/embed/biRr_YNo4wQ?rel=0" allowfullscreen></iframe>
+            </div>
+            <div class="bento-content" style="padding-top: 0.5rem;">
+               <span class="bento-tag">Webinar</span>
+               <h3>Tu arma secreta</h3>
+               <p>Estrategias de venta directa que nadie te cuenta.</p>
+            </div>
+          </div>
+
+          <!-- Wide Card -->
+          <div class="bento-card bento-wide group">
+             <div class="bento-img" style="background-image: url('/images/4484.jpg')"></div>
+             <div class="bento-overlay"></div>
+
+             <div class="bento-content">
+               <span class="bento-tag">Update Log</span>
+               <h3>Lanzamiento PMS 2026.04</h3>
+               <p>Ya disponible la nueva versión con gestión de cabinas mejorada y motor de IA para predicción de demanda estacional.</p>
+               <span class="btn-minimal">Ver changelog &rarr;</span>
+             </div>
           </div>
         </div>
 
-        <div style="margin-top: 6rem; text-align: center; border-top: 1px solid var(--border-subtle); padding-top: 4rem;">
-          <button class="btn btn-primary btn-lg" style="background: var(--text-main); color: var(--bg-secondary); padding: 1rem 2rem; border-radius: var(--radius-pill); font-weight: 600;">Leer todos los artículos</button>
+        <div class="cta-banner-premium mt-5 animate-fade-in-up">
+          <h2>No te pierdas ninguna actualización</h2>
+          <p>Suscríbete a nuestra newsletter para estar al día de las últimas tendencias del sector.</p>
+          <button class="prm-btn-primary">Suscribirme al Blog</button>
         </div>
       </div>
     </div>
-  `
+  `,
+  styles: [`
+    .grid-news-bento {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(280px, auto);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .bento-lg { grid-column: span 2; grid-row: span 2; }
+    .bento-wide { grid-column: span 2; }
+
+    .video-preview-mini { height: 180px; position: relative; overflow: hidden; border-radius: 20px 20px 0 0; }
+    .video-preview-mini iframe { position: absolute; width:100%; height:100%; border:0; }
+
+    @media (max-width: 1100px) {
+      .grid-news-bento { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      .grid-news-bento { grid-template-columns: 1fr; }
+      .bento-lg, .bento-wide { grid-column: span 1; grid-row: span 1; }
+      .video-preview-mini { height: 220px; }
+    }
+  `]
 })
 export class NovedadesComponent {}
