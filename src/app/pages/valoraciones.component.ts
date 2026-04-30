@@ -30,7 +30,7 @@ import { Component } from '@angular/core';
                 <div style="width: 50px; height: 50px; border-radius: 50%; background: #ccc;"></div>
                 <div>
                   <h4 style="margin: 0; font-size: 1rem;">Gerencia Hotelera</h4>
-                  <p style="margin: 0; font-size: 0.8rem; opacity: 0.7;">Hotel Boutique Cantabria</p>
+                  <p style="margin: 0; font-size: 0.8rem; opacity: 0.7;">Hotel Boutique Cantabria</p>     
                 </div>
               </div>
             </div>
