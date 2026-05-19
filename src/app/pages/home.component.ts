@@ -155,6 +155,134 @@ import { RouterLink } from '@angular/router';
       </div>
     </section>
 
+    <!-- New normative: Alquiler -->
+    <section class="section">
+      <div class="container">
+        <div class="feature-split animate-fade-in-up">
+          <div class="feature-text">
+            <span class="badge">Nueva Normativa Legal</span>
+            <h2>Nº de Registro de Alquiler (Ministerio de Vivienda)</h2>
+            <p>Misterplan se adapta automáticamente a la nueva normativa del Ministerio de Vivienda para alquileres de corta duración. Automatiza la generación y validación del Número de Registro de Alquiler en todas tus reservas.</p>
+            <p>Simplifica el cumplimiento legal y evita sanciones administrativas manteniendo toda tu información sincronizada.</p>
+            <a routerLink="/alojamientos" class="btn-outline mt-4">Ver módulo legal</a>
+          </div>
+          <div class="feature-image">
+            <div style="background: linear-gradient(135deg, #0A1C3E, #F98100); height: 350px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);">Cumplimiento Normativo</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specific Products Grid -->
+    <section class="section section-bg-light">
+      <div class="container">
+        <div class="section-header">
+          <h2>Un módulo para cada necesidad</h2>
+          <p class="text-muted text-lg max-w-2xl mx-auto">Explora nuestro ecosistema completo de herramientas especializadas para cada sector del turismo.</p>
+        </div>
+        
+        <div class="products-grid">
+          <a routerLink="/mrp-hotel" class="product-mini-card">
+            <div class="pm-icon">🏨</div>
+            <div class="pm-content">
+              <h4>MRP-HOTEL</h4>
+              <p>Solución completa para hoteles</p>
+            </div>
+          </a>
+          <a routerLink="/mrp-casa-rural" class="product-mini-card">
+            <div class="pm-icon">🏡</div>
+            <div class="pm-content">
+              <h4>MRP-CASA RURAL</h4>
+              <p>Solución para casas rurales</p>
+            </div>
+          </a>
+          <a routerLink="/alojamientos" class="product-mini-card">
+            <div class="pm-icon">🏢</div>
+            <div class="pm-content">
+              <h4>MRP-APARTAMENTOS</h4>
+              <p>Gestión y comercialización</p>
+            </div>
+          </a>
+          <a routerLink="/ocio" class="product-mini-card">
+            <div class="pm-icon">🏛️</div>
+            <div class="pm-content">
+              <h4>MRP-MUSEUM</h4>
+              <p>Venta y gestión de tickets</p>
+            </div>
+          </a>
+          <a routerLink="/ocio" class="product-mini-card">
+            <div class="pm-icon">🍷</div>
+            <div class="pm-content">
+              <h4>MRP-BODEGAS</h4>
+              <p>Gestión turística y enoturismo</p>
+            </div>
+          </a>
+          <a routerLink="/ocio" class="product-mini-card">
+            <div class="pm-icon">🎵</div>
+            <div class="pm-content">
+              <h4>MRP-CONCIERTOS</h4>
+              <p>Ticketing y taquilla</p>
+            </div>
+          </a>
+          <a routerLink="/destinos" class="product-mini-card">
+            <div class="pm-icon">🏛️</div>
+            <div class="pm-content">
+              <h4>AYUNTAMIENTOS</h4>
+              <p>Plataforma SmartCity</p>
+            </div>
+          </a>
+          <a routerLink="/destinos" class="product-mini-card">
+            <div class="pm-icon">🗺️</div>
+            <div class="pm-content">
+              <h4>DESTINOS TURÍSTICOS</h4>
+              <p>Comercialización integral</p>
+            </div>
+          </a>
+          <a routerLink="/destinos" class="product-mini-card">
+            <div class="pm-icon">💳</div>
+            <div class="pm-content">
+              <h4>TRAVEL CARD</h4>
+              <p>Tarjeta multiproducto</p>
+            </div>
+          </a>
+          <a routerLink="/turismo-activo" class="product-mini-card">
+            <div class="pm-icon">🧗</div>
+            <div class="pm-content">
+              <h4>TURISMO ACTIVO</h4>
+              <p>Venta y gestión de tickets</p>
+            </div>
+          </a>
+          <a routerLink="/actividades" class="product-mini-card">
+            <div class="pm-icon">🏄</div>
+            <div class="pm-content">
+              <h4>ACT. ACUÁTICAS</h4>
+              <p>Reservas y comercialización</p>
+            </div>
+          </a>
+          <a routerLink="/actividades" class="product-mini-card">
+            <div class="pm-icon">🎈</div>
+            <div class="pm-content">
+              <h4>VIAJE EN GLOBO</h4>
+              <p>Venta de regalos</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials / Opiniones -->
+    <section class="section">
+      <div class="container text-center">
+        <h2 class="mb-3">Cientos de clientes confían en Misterplan</h2>
+        <p class="text-muted mb-5 text-lg">Descubre lo que dicen de nosotros los profesionales del sector.</p>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Misterplan ha cambiado por completo la forma en la que gestionamos las reservas de nuestras actividades. La integración con la plataforma del destino es simplemente espectacular."</p>
+          <p class="testimonial-author">- Cliente de Turismo Activo</p>
+        </div>
+        <a routerLink="/valoraciones" class="btn-primary mt-4" style="margin-top: 2rem;">Ver más opiniones</a>
+      </div>
+    </section>
+
     <!-- Final CTA Banner -->
     <section class="section">
       <div class="container">
@@ -364,6 +492,79 @@ import { RouterLink } from '@angular/router';
       font-size: 1.125rem;
       color: var(--text-muted);
       margin-bottom: 1.25rem;
+    }
+
+    /* Mini Cards */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .product-mini-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all var(--transition-speed) ease;
+    }
+    
+    .product-mini-card:hover {
+      border-color: var(--border-focus);
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+    
+    .pm-icon {
+      font-size: 2rem;
+      background: var(--bg-color);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-sm);
+    }
+    
+    .pm-content h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+      color: var(--secondary-color);
+    }
+    
+    .pm-content p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--bg-secondary);
+      padding: 3rem;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border: 1px solid var(--border-subtle);
+    }
+    
+    .testimonial-text {
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    
+    .testimonial-author {
+      font-weight: 700;
+      color: var(--primary-color);
     }
 
     /* Responsive */
