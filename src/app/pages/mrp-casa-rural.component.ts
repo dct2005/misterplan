@@ -4,101 +4,53 @@ import { Component } from '@angular/core';
   selector: 'app-mrp-casa-rural',
   standalone: true,
   template: `
-    <div class="page-container relative-overflow" style="padding-top: 140px; padding-bottom: 100px;">
-
-
-      <div class="container animate-fade-in-up relative-z">
+    <div class="page-container" style="padding-top: 140px; padding-bottom: 100px; background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-secondary) 100%);">
+      <div class="container">
+        
         <!-- Hero Header -->
-        <div class="text-center mb-5">
-          <div class="badge-premium">Rural Accommodations</div>
-          <h1 class="prm-title">Casas y Masías <span class="text-gradient">Motor Casa Rural</span></h1>
-          <p class="prm-subtitle">
+        <div class="text-center mb-5 max-w-3xl mx-auto animate-fade-in-up">
+          <span class="badge" style="display: inline-block; padding: 6px 14px; background: rgba(10, 28, 62, 0.1); color: var(--secondary-color); border-radius: 999px; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem;">Rural Accommodations</span>
+          <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem; letter-spacing: -0.02em;">Casas y Masías Motor Casa Rural</h1>
+          <p class="text-muted" style="font-size: 1.2rem; line-height: 1.7;">
             Sistema hiper-especializado para el alquiler íntegro. Conecta con EscapadaRural, Airbnb y Booking al instante sin miedos.
           </p>
         </div>
 
-        <!-- Bento Grid -->
-        <div class="grid-silo-bento">
-          <!-- Main Card -->
-          <div class="bento-card bento-lg group">
-            <div class="bento-img" style="background-image: url('/images/741.jpg')"></div>
-            <div class="bento-overlay"></div>
+        <!-- Horizontal Features -->
+        <div class="features-list mt-5" style="display: flex; flex-direction: column; gap: 6rem; margin-top: 5rem;">
 
-            <div class="bento-content">
-              <span class="bento-tag">Full-House Management</span>
-              <h3>Reglas de Alquiler Íntegro</h3>
-              <p>Tu casa se alquila entera. Configura estancias mínimas por temporadas o añade suplementos por leña y mascotas.</p>
-              <div class="bento-footer">
-                <span class="btn-minimal">Configurar reglas &rarr;</span>
-              </div>
+          <div class="feature-split animate-fade-in-up" style="display: flex; align-items: center; gap: 4rem; flex-direction: row;">
+            <div class="feature-text" style="flex: 1;">
+              <span class="badge mb-3" style="display: inline-block; padding: 6px 12px; background: var(--primary-color); color: white; border-radius: 6px; font-size: 0.85rem; font-weight: 700;">Full-House Management</span>
+              <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Reglas de Alquiler Íntegro</h2>
+              <p class="text-muted" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem;">Tu casa se alquila entera. Configura estancias mínimas por temporadas o añade suplementos por leña y mascotas.</p>
+              <button class="btn-outline" style="border: 2px solid var(--secondary-color); color: var(--secondary-color); background: transparent; padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer;">Configurar reglas &rarr;</button>
+            </div>
+            <div class="feature-image" style="flex: 1;">
+              <div style="background-image: url('/images/741.jpg'); height: 400px; background-size: cover; background-position: center; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);"></div>
             </div>
           </div>
 
-          <!-- Feature 1 -->
-          <div class="bento-card group">
-            <div class="bento-img" style="background-image: url('/images/gestion-comercializacion-apartamento-turistico.jpg')"></div>
-            <div class="bento-overlay"></div>
-
-            <div class="bento-content">
-              <h3>Sincronización iCal/API</h3>
-              <p>Conexión directa con EscapadaRural, Rentalia y portales rurales clave. Adiós al overbooking.</p>
-              <span class="btn-minimal">Integrar &rarr;</span>
-            </div>
-          </div>
-
-          <!-- Feature 2 -->
-          <div class="bento-card group">
-            <div class="bento-img" style="background-image: url('/images/channel-manager-para-hoteles-info.jpg')"></div>
-            <div class="bento-overlay"></div>
-
-            <div class="bento-content">
-              <h3>Partes de Viajeros</h3>
-              <p>Generación y firma digital de los partes para Guardia Civil desde el propio alojamiento rural.</p>
-              <span class="btn-minimal">Legal &rarr;</span>
-            </div>
-          </div>
-
-          <!-- Wide Card -->
-          <div class="bento-card bento-wide group">
-            <div class="bento-img" style="background-image: url('/images/4480.jpg')"></div>
-            <div class="bento-overlay"></div>
-
-            <div class="bento-content">
-              <span class="bento-tag">Maintenance</span>
-              <h3>Control de Limpiezas Semanales</h3>
-              <p>Organiza los turnos de limpieza entre entradas y salidas consecutivas de forma visual y coordinada.</p>
-              <span class="btn-minimal">Gestionar &rarr;</span>
-            </div>
-          </div>
         </div>
 
-        <div class="cta-banner-premium mt-5 animate-fade-in-up">
-          <h2>La paz del campo, la potencia de la nube</h2>
-          <p>Misterplan es el software que moderniza el sector rural con elegancia y robustez tecnológica.</p>
-          <button class="prm-btn-primary">Ver demo rural</button>
+        <!-- CTA Banner -->
+        
+        <div class="cta-banner mt-5 text-center animate-fade-in-up" style="background: var(--secondary-color); padding: 5rem 2rem; border-radius: 24px; color: white; margin-top: 8rem;">
+          <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">La paz del campo, la potencia de la nube</h2>
+          <p style="font-size: 1.15rem; max-width: 600px; margin-inline: auto; color: #94A3B8; margin-bottom: 2.5rem;">Misterplan es el software que moderniza el sector rural con elegancia y robustez tecnológica.</p>
+          <button class="btn-primary" style="background: var(--primary-color); color: white; border: none; padding: 1.2rem 2.5rem; border-radius: 99px; font-weight: bold; font-size: 1.1rem; cursor: pointer;">Ver demo rural</button>
         </div>
+        
       </div>
     </div>
   `,
   styles: [`
-    .grid-silo-bento {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 280px;
-      gap: 1.5rem;
-      margin-top: 4rem;
-    }
-    .orb-2 { background: radial-gradient(circle, #84cc16, transparent); }
-    .bento-lg { grid-column: span 2; grid-row: span 2; }
-    .bento-wide { grid-column: span 2; }
-
-    @media (max-width: 1100px) {
-      .grid-silo-bento { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 250px; }
-    }
-    @media (max-width: 700px) {
-      .grid-silo-bento { grid-template-columns: 1fr; grid-auto-rows: auto; }
-      .bento-lg, .bento-wide { grid-column: span 1; grid-row: span 1; }
-      .bento-card { height: 350px; }
+    .max-w-3xl { max-width: 48rem; }
+    .mx-auto { margin-inline: auto; }
+    .mt-5 { margin-top: 4rem; }
+    @media (max-width: 900px) {
+      .feature-split { flex-direction: column !important; text-align: center; gap: 2rem !important; }
+      .feature-image { width: 100%; }
     }
   `]
 })

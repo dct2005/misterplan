@@ -1,57 +1,109 @@
-<div class="global-aurora-bg">
-  <div class="aurora-orb orb-1"></div>
-  <div class="aurora-orb orb-2"></div>
-  <div class="aurora-orb orb-3"></div>
-</div>
-
-<nav class="navbar glass">
+<nav class="navbar">
   <div class="container nav-content">
     <div class="logo">
       <a routerLink="/" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
         <img src="/images/820.png" alt="Misterplan" style="height: 35px;">
       </a>
     </div>
+    
     <ul class="nav-links">
-      <li><a routerLink="/alojamientos">Alojamientos</a></li>
-      <li><a routerLink="/ocio">Ocio y Cultura</a></li>
-      <li><a routerLink="/actividades">Actividades</a></li>
-      <li><a routerLink="/destinos">Destinos</a></li>
-      <li><a routerLink="/novedades">Novedades</a></li>
-      <li><a routerLink="/tutoriales">Tutoriales</a></li>
-      <li><a routerLink="/soporte">Soporte</a></li>
+      <li>
+        <a routerLink="/alojamientos" class="has-dropdown">Alojamientos</a>
+        <div class="dropdown-menu">
+          <a routerLink="/mrp-hotel">MRP-HOTEL</a>
+          <a routerLink="/mrp-casa-rural">MRP-CASA RURAL</a>
+          <a routerLink="/alojamientos">MRP-APARTAMENTOS</a>
+          <a routerLink="/especial-checkin">Especial Checkin</a>
+          <a routerLink="/tarifas">Revenue & Tarifas</a>
+          <a routerLink="/cerraduras">Cerraduras Inteligentes</a>
+          <a routerLink="/verifactu">Verifactu</a>
+        </div>
+      </li>
+      <li>
+        <a routerLink="/actividades" class="has-dropdown">Actividades</a>
+        <div class="dropdown-menu">
+          <a routerLink="/turismo-activo">Turismo Activo</a>
+          <a routerLink="/actividades">Actividades Acuáticas</a>
+          <a routerLink="/actividades">Viaje en Globo</a>
+        </div>
+      </li>
+      <li>
+        <a routerLink="/ocio" class="has-dropdown">Ocio y Cultura</a>
+        <div class="dropdown-menu">
+          <a routerLink="/ocio">MRP-MUSEUM</a>
+          <a routerLink="/ocio">MRP-BODEGAS</a>
+          <a routerLink="/ocio">MRP-CONCIERTOS</a>
+        </div>
+      </li>
+      <li>
+        <a routerLink="/destinos" class="has-dropdown">Destinos</a>
+        <div class="dropdown-menu">
+          <a routerLink="/destinos">Smartcity Ayuntamientos</a>
+          <a routerLink="/destinos">Destinos Turísticos</a>
+          <a routerLink="/destinos">Travel Card</a>
+        </div>
+      </li>
+      <li><a routerLink="/tutoriales">Aprender</a></li>
     </ul>
+
+    <div class="nav-actions">
+      <a href="https://panel.misterplan.es" class="login-link">Iniciar sesión</a>
+      <a routerLink="/contacto" class="btn-primary" style="padding: 0.6rem 1.4rem; font-size: 0.95rem;">Solicitar Demo</a>
+    </div>
   </div>
 </nav>
 
-<main style="padding-top: 80px;">
+<main>
   <router-outlet></router-outlet>
 </main>
 
-<footer class="footer border-top">
-  <div class="container footer-content">
-    <div class="footer-brand">
-      <h3 class="logo" style="margin-bottom: 1rem;">
-        <a routerLink="/" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-          <img src="/images/820.png" alt="Misterplan" style="height: 35px;">
-        </a>
-      </h3>
-      <p class="text-muted">Llevando la gestión turística al siguiente nivel. © 2026.</p>
-    </div>
-    <div class="footer-links">
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3 class="logo" style="margin-bottom: 1rem;">
+          <a routerLink="/" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+            <!-- Using white logo version if available, otherwise just text/icon -->
+            <span class="logo-mister">Mister</span><span class="logo-plan">plan</span>
+          </a>
+        </h3>
+        <p>Software para la gestión turística. El PMS integral, Channel Manager y motor de reservas que se adapta a ti.</p>
+      </div>
+
+      <div class="link-group">
+        <h4>Alojamientos</h4>
+        <a routerLink="/mrp-hotel">Hotel</a>
+        <a routerLink="/mrp-casa-rural">Casa Rural</a>
+        <a routerLink="/alojamientos">Apartamentos Turísticos</a>
+        <a routerLink="/especial-checkin">Especial Checkin</a>
+        <a routerLink="/tarifas">Gestión de Tarifas</a>
+      </div>
+
       <div class="link-group">
         <h4>Soluciones</h4>
-        <a routerLink="/alojamientos">Alojamientos</a>
-        <a routerLink="/ocio">Ocio y Espectáculos</a>
-        <a routerLink="/actividades">Actividades Turísticas</a>
-        <a routerLink="/destinos">Ayuntamientos y Destinos</a>
+        <a routerLink="/actividades">Turismo Activo y Actividades</a>
+        <a routerLink="/ocio">Cultura, Ocio y Espectáculos</a>
+        <a routerLink="/destinos">Plataformas para Ayuntamientos</a>
+        <a routerLink="/cerraduras">Cerraduras Electrónicas</a>
+        <a routerLink="/verifactu">Verifactu y Facturación</a>
       </div>
+
       <div class="link-group">
-        <h4>Compañía</h4>
-        <a routerLink="/valoraciones">Valoraciones</a>
-        <a routerLink="/novedades">Novedades y Blog</a>
+        <h4>Soporte y Compañía</h4>
+        <a routerLink="/aula">Aula de Formación</a>
         <a routerLink="/tutoriales">Tutoriales</a>
-        <a routerLink="/soporte">Soporte y Ayuda</a>
-        <a routerLink="/contacto">Contacto y Ventas</a>
+        <a routerLink="/soporte">Soporte MisterPlan</a>
+        <a routerLink="/contacto">Contactar con MisterPlan</a>
+        <a routerLink="/valoraciones">Opiniones de clientes</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2026 Misterplan. Todos los derechos reservados.</p>
+      <div class="footer-legal">
+        <a href="#">Aviso Legal</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Política de Cookies</a>
       </div>
     </div>
   </div>

@@ -1,107 +1,79 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-actividades',
   standalone: true,
+  imports: [RouterLink],
   template: `
-    <div class="page-container relative-overflow" style="padding-top: 140px; padding-bottom: 100px;">
-
-
-      <div class="container animate-fade-in-up relative-z">
+    <div class="page-container" style="padding-top: 140px; padding-bottom: 100px;">
+      <div class="container animate-fade-in-up">
+        
         <!-- Hero Header -->
-        <div class="text-center mb-5">
-          <div class="badge-premium">Tourism Activities</div>
-          <h1 class="prm-title">Gestión para <span class="text-gradient">Actividades Turísticas</span></h1>
-          <p class="prm-subtitle">
+        <div class="text-center mb-5 max-w-3xl mx-auto">
+          <span class="badge" style="display: inline-block; padding: 6px 14px; background: rgba(10, 28, 62, 0.1); color: var(--secondary-color); border-radius: 999px; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem;">Tourism Activities</span>
+          <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem; letter-spacing: -0.02em;">Gestión para Actividades Turísticas</h1>
+          <p class="text-muted" style="font-size: 1.2rem; line-height: 1.7;">
             Controla los aforos, el personal y la distribución en las principales OTA del mundo desde un solo panel de control unificado.
           </p>
         </div>
 
-        <!-- Bento Grid for Activities -->
-        <div class="grid-actividades-bento">
-          <!-- Main Hero Card -->
-          <div class="bento-card bento-lg group">
-            <div class="bento-img" style="background-image: url('/images/ira-software-para-gestion-de-actividades-turisticas.jpg')"></div>
-            <div class="bento-overlay"></div>
-
-            <div class="bento-content">
-              <span class="bento-tag">All-in-One</span>
-              <h3>Software de Gestión Integral</h3>
-              <p>La solución definitiva para digitalizar tu empresa de ocio. Reservas en tiempo real y asignación de guías automática.</p>
-              <div class="bento-footer">
-                <span class="btn-minimal">Explorar módulos &rarr;</span>
-              </div>
-            </div>
-          </div>
-
+        <!-- Products Grid -->
+        <div class="product-grid mt-5">
+          
           <!-- Turismo Activo -->
-          <a href="/turismo-activo" class="bento-card group decoration-none">
-            <div class="bento-img" style="background-image: url('/images/motor-empresas-actividades-turisticas.jpg')"></div>
-            <div class="bento-overlay"></div>
-
-            <div class="bento-content">
-              <h3>Turismo Activo</h3>
-              <p>Multiaventura, kayak y alquiler de material.</p>
-              <span class="btn-minimal">Saber más &rarr;</span>
-            </div>
+          <a routerLink="/turismo-activo" class="guesty-card decoration-none" style="display: block;">
+            <div class="card-img-top mb-3" style="background-image: url('/images/motor-empresas-actividades-turisticas.jpg'); height: 200px; background-size: cover; background-position: center; border-radius: 8px;"></div>
+            <h3>Turismo Activo</h3>
+            <p class="text-muted mb-4">Multiaventura, kayak y alquiler de material. Integración de reservas en tiempo real.</p>
+            <span class="card-link">Saber más &rarr;</span>
           </a>
 
           <!-- Barcos -->
-          <a href="/barcos" class="bento-card group decoration-none">
-            <div class="bento-img" style="background-image: url('/images/823.jpg')"></div>
-            <div class="bento-overlay"></div>
-
-            <div class="bento-content">
-              <h3>Barcos y Charter</h3>
-              <p>Gestión de flotas y venta por plazas.</p>
-              <span class="btn-minimal">Ver flota &rarr;</span>
-            </div>
+          <a routerLink="/barcos" class="guesty-card decoration-none" style="display: block;">
+            <div class="card-img-top mb-3" style="background-image: url('/images/823.jpg'); height: 200px; background-size: cover; background-position: center; border-radius: 8px;"></div>
+            <h3>Barcos y Charter</h3>
+            <p class="text-muted mb-4">Gestión de flotas y venta por plazas. Control de disponibilidad simplificado.</p>
+            <span class="card-link">Ver flota &rarr;</span>
           </a>
 
           <!-- Rutas -->
-          <a href="/rutas" class="bento-card bento-wide group decoration-none">
-            <div class="bento-img" style="background-image: url('/images/motor-turismo-activo.jpg')"></div>
-            <div class="bento-overlay"></div>
-
-            <div class="bento-content">
-              <span class="bento-tag">Tours & Routes</span>
-              <h3>Rutas y Visitas Guiadas</h3>
-              <p>Optimiza tus Free Tours y rutas urbanas con control de aforo inmediato y confirmación vía SMS.</p>
-              <span class="btn-minimal">Gestionar rutas &rarr;</span>
-            </div>
+          <a routerLink="/rutas" class="guesty-card decoration-none" style="display: block;">
+            <div class="card-img-top mb-3" style="background-image: url('/images/motor-turismo-activo.jpg'); height: 200px; background-size: cover; background-position: center; border-radius: 8px;"></div>
+            <h3>Rutas y Visitas Guiadas</h3>
+            <p class="text-muted mb-4">Optimiza tus Free Tours y rutas urbanas con control de aforo y SMS.</p>
+            <span class="card-link">Gestionar rutas &rarr;</span>
           </a>
+
         </div>
 
-        <div class="cta-banner-premium mt-5 animate-fade-in-up">
-          <h2>Digitaliza tu aventura hoy mismo</h2>
-          <p>Misterplan es el motor que impulsa a las mejores empresas de actividades de España.</p>
-          <button class="prm-btn-primary">Solicitar demo gratuita</button>
+        <!-- Section 3: Value Prop (SaaS Banner) -->
+        <div class="cta-banner mt-5 text-center" style="background: var(--bg-color); padding: 4rem; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle);">
+          <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Digitaliza tu aventura hoy mismo</h2>
+          <p class="text-muted mb-4" style="font-size: 1.15rem; max-width: 600px; margin-inline: auto;">Misterplan es el motor que impulsa a las mejores empresas de actividades de España.</p>
+          <div style="display: flex; gap: 1rem; justify-content: center;">
+            <a routerLink="/contacto" class="btn-primary">Solicitar demo gratuita</a>
+          </div>
         </div>
+
       </div>
     </div>
   `,
   styles: [`
-    .grid-actividades-bento {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 280px;
-      gap: 1.5rem;
-      margin-top: 4rem;
-    }
-    .orb-2 { background: radial-gradient(circle, #10b981, transparent); }
-
-    .bento-lg { grid-column: span 2; grid-row: span 2; }
-    .bento-wide { grid-column: span 2; }
-
+    .max-w-3xl { max-width: 48rem; }
+    .mx-auto { margin-inline: auto; }
+    .mt-5 { margin-top: 4rem; }
     .decoration-none { text-decoration: none; }
-
-    @media (max-width: 1100px) {
-      .grid-actividades-bento { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 250px; }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
     }
-    @media (max-width: 700px) {
-      .grid-actividades-bento { grid-template-columns: 1fr; grid-auto-rows: auto; }
-      .bento-lg, .bento-wide { grid-column: span 1; grid-row: span 1; }
-      .bento-card { height: 350px; }
+    
+    .card-link {
+      font-weight: 600;
+      color: var(--primary-color);
     }
   `]
 })
