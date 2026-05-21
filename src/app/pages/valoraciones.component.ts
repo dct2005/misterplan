@@ -1,101 +1,120 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-valoraciones',
   standalone: true,
+  imports: [RouterLink],
   template: `
-    <div class="page-container relative-overflow" style="padding-top: 140px; padding-bottom: 100px;">
-
-
-      <div class="container animate-fade-in-up relative-z">
+    <div class="page-container" style="padding-top: 140px; padding-bottom: 100px; background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-secondary) 100%);">
+      <div class="container animate-fade-in-up">
+        
         <!-- Hero Header -->
-        <div class="text-center mb-5">
-          <div class="badge-premium">Customer Stories</div>
-          <h1 class="prm-title">Opiniones y <span class="text-gradient">Casos de Éxito</span></h1>
-          <p class="prm-subtitle">
-            Más de 5,000 profesionales del turismo confían en la robustez y elegancia de Misterplan para sus negocios.
+        <div class="text-center mb-5 max-w-3xl mx-auto">
+          <span class="badge" style="display: inline-block; padding: 6px 14px; background: rgba(249, 129, 0, 0.1); color: var(--primary-color); border-radius: 999px; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem;">Customer Stories</span>
+          <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem; letter-spacing: -0.02em; color: var(--secondary-color);">Opiniones y Casos de Éxito</h1>
+          <p class="text-muted" style="font-size: 1.2rem; line-height: 1.7;">
+            Más de 5.000 profesionales del alojamiento y el ocio confían cada día en la robustez, agilidad y elegancia de Misterplan para hacer crecer su negocio.
           </p>
+          <div class="mt-4" style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+            <a routerLink="/contacto" class="btn-primary" style="padding: 1rem 2rem; border-radius: 99px; font-size: 1.1rem; text-decoration: none;">Empezar a Escalar</a>
+          </div>
         </div>
 
-        <div class="grid-valoraciones-bento">
-          <!-- Featured Quote -->
-          <div class="bento-card bento-lg group">
-            <div class="bento-img" style="background-image: url('/images/16-razones-para-elegir-misterplan-pequeno-hotel.jpg')"></div>
-            <div class="bento-overlay"></div>
-            <div class="bento-content">
-              <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
-              <h3 style="font-size: 2rem;">"La unificación que necesitábamos"</h3>
-              <p style="font-size: 1.2rem;">Desde que usamos Misterplan, los overbookings son cosa del pasado. Es el motor más fiable del mercado español.</p>
-              <div class="mt-4" style="display: flex; align-items: center; gap: 1rem;">
-                <div style="width: 50px; height: 50px; border-radius: 50%; background: #ccc;"></div>
+        <!-- Horizontal Features -->
+        <div class="features-list mt-5" style="display: flex; flex-direction: column; gap: 6rem; margin-top: 8rem;">
+
+          <!-- Feature 1: Featured Quote -->
+          <div class="feature-split animate-fade-in-up" style="display: flex; align-items: center; gap: 4rem; flex-direction: row;">
+            <div class="feature-text" style="flex: 1;">
+              <span class="badge mb-3" style="display: inline-block; padding: 6px 12px; background: rgba(249, 129, 0, 0.1); color: var(--primary-color); border-radius: 6px; font-size: 0.85rem; font-weight: 700;">Featured Story</span>
+              <div style="color: #fbbf24; font-size: 1.5rem; margin-bottom: 1rem;">⭐⭐⭐⭐⭐</div>
+              <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--secondary-color); line-height: 1.2;">"La unificación y tranquilidad que necesitábamos"</h2>
+              <p class="text-muted" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem; font-style: italic;">
+                "Desde que decidimos implantar Misterplan en nuestros hoteles boutique, las duplicidades y overbookings son cosa del pasado. Sin duda, es el motor de reservas más robusto y fiable del mercado español."
+              </p>
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); display: flex; justify-content: center; align-items: center; color: white; font-weight: 800;">H</div>
                 <div>
-                  <h4 style="margin: 0; font-size: 1rem;">Gerencia Hotelera</h4>
-                  <p style="margin: 0; font-size: 0.8rem; opacity: 0.7;">Hotel Boutique Cantabria</p>     
+                  <h4 style="margin: 0; font-size: 1rem; color: var(--secondary-color); font-weight: 700;">Gerencia General</h4>
+                  <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Hotel Boutique Cantabria</p>
                 </div>
+              </div>
+            </div>
+            <div class="feature-image" style="flex: 1;">
+              <div style="background-image: url('/images/16-razones-para-elegir-misterplan-pequeno-hotel.jpg'); background-size: cover; background-position: center; height: 380px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);"></div>
+            </div>
+          </div>
+
+          <!-- Feature 2: Sector Testimonials (Reverse) -->
+          <div class="feature-split animate-fade-in-up" style="display: flex; align-items: center; gap: 4rem; flex-direction: row-reverse;">
+            <div class="feature-text" style="flex: 1;">
+              <span class="badge mb-3" style="display: inline-block; padding: 6px 12px; background: rgba(10, 28, 62, 0.1); color: var(--secondary-color); border-radius: 6px; font-size: 0.85rem; font-weight: 700;">Sectores Diversos</span>
+              <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--secondary-color);">Líderes en Ocio y Aventura</h2>
+              
+              <div style="display: flex; flex-direction: column; gap: 2rem; margin-top: 2rem;">
+                <!-- Review A -->
+                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(10,28,62,0.04); border: 1px solid rgba(10,28,62,0.05);">
+                  <div style="color: #fbbf24; font-size: 1.1rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+                  <h4 style="margin: 0 0 0.5rem 0; color: var(--secondary-color); font-weight: 700;">"Soporte técnico inmejorable de 10"</h4>
+                  <p class="text-muted" style="margin: 0 0 1rem 0; font-size: 0.95rem;">Tener a un equipo técnico altamente cualificado que entiende perfectamente el negocio del turismo de aventura y ocio marca la diferencia diaria.</p>
+                  <small style="font-weight: bold; color: var(--primary-color);">Empresa de Multiaventura</small>
+                </div>
+                <!-- Review B -->
+                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(10,28,62,0.04); border: 1px solid rgba(10,28,62,0.05);">
+                  <div style="color: #fbbf24; font-size: 1.1rem; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+                  <h4 style="margin: 0 0 0.5rem 0; color: var(--secondary-color); font-weight: 700;">"Velocidad extrema en taquilla física"</h4>
+                  <p class="text-muted" style="margin: 0 0 1rem 0; font-size: 0.95rem;">La validación de códigos QR mediante la app de Misterplan ha agilizado los accesos a nuestro museo de forma espectacular, eliminando colas.</p>
+                  <small style="font-weight: bold; color: var(--primary-color);">Gestor Cultural y Museo</small>
+                </div>
+              </div>
+            </div>
+            <div class="feature-image" style="flex: 1;">
+              <div style="background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%); height: 420px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; padding: 3rem; text-align: center;">
+                <span style="font-size: 4rem; margin-bottom: 1.5rem;">🎯</span>
+                <h3 style="color: white; font-size: 2rem; margin-bottom: 1rem;">98.6%</h3>
+                <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; max-width: 300px; margin: 0;">De tasa de fidelidad anual entre nuestros clientes asociados en la península.</p>
               </div>
             </div>
           </div>
 
-          <!-- Short Testimonial 1 -->
-          <div class="bento-card group">
-            <div class="bento-content">
-              <div class="stars mb-2">⭐⭐⭐⭐⭐</div>
-              <h3>"Soporte 10"</h3>
-              <p>Tener un equipo técnico que entiende de verdad el turismo es lo que marca la diferencia.</p>
-              <small class="mt-auto block" style="opacity: 0.6;">Empresa de Multiaventura</small>
+          <!-- Feature 3: Innovación Continua -->
+          <div class="feature-split animate-fade-in-up" style="display: flex; align-items: center; gap: 4rem; flex-direction: row;">
+            <div class="feature-text" style="flex: 1;">
+              <span class="badge mb-3" style="display: inline-block; padding: 6px 12px; background: rgba(10, 28, 62, 0.1); color: var(--secondary-color); border-radius: 6px; font-size: 0.85rem; font-weight: 700;">Comunidad</span>
+              <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--secondary-color);">Innovación Continua</h2>
+              <p class="text-muted" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem;">Únete hoy a la comunidad de alojamientos, destinos inteligentes y empresas de ocio más avanzada tecnológicamente de Europa y Latinoamérica.</p>
+              <a routerLink="/contacto" class="btn-outline" style="border: 2px solid var(--secondary-color); color: var(--secondary-color); background: transparent; padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; text-decoration: none;">Solicitar información &rarr;</a>
+            </div>
+            <div class="feature-image" style="flex: 1;">
+              <div style="background-image: url('/images/4480.jpg'); background-size: cover; background-position: center; height: 380px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);"></div>
             </div>
           </div>
 
-          <!-- Short Testimonial 2 -->
-          <div class="bento-card group">
-            <div class="bento-content">
-              <div class="stars mb-2">⭐⭐⭐⭐⭐</div>
-              <h3>"Rapidez en Taquilla"</h3>
-              <p>La validación de códigos QR ha agilizado la entrada a nuestro museo de forma espectacular.</p>
-              <small class="mt-auto block" style="opacity: 0.6;">Gestor Cultural</small>
-            </div>
-          </div>
-
-          <!-- Image Card -->
-          <div class="bento-card bento-wide group">
-             <div class="bento-img" style="background-image: url('/images/4480.jpg')"></div>
-             <div class="bento-overlay"></div>
-             <div class="bento-content">
-               <h3>Innovación Continua</h3>
-               <p>Únete a la comunidad de alojamientos y empresas de ocio más avanzada tecnológicamente.</p>
-             </div>
-          </div>
         </div>
 
-        <div class="cta-banner-premium mt-5 animate-fade-in-up">
-          <h2>Tu éxito es nuestra mayor garantía</h2>
-          <p>Queremos que seas nuestra próxima historia de éxito.</p>
-          <button class="prm-btn-primary">Empezar a Escalar</button>
+        <!-- CTA Section -->
+        <div class="cta-banner mt-5 text-center animate-fade-in-up" style="background: var(--secondary-color); padding: 5rem 2rem; border-radius: 24px; color: white; margin-top: 8rem;">
+          <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Tu éxito es nuestra mayor garantía</h2>
+          <p style="font-size: 1.15rem; max-width: 600px; margin-inline: auto; color: #94A3B8; margin-bottom: 2.5rem;">
+            Queremos que tu negocio sea nuestra próxima historia de éxito compartida en el sector.
+          </p>
+          <a routerLink="/contacto" class="btn-primary" style="background: var(--primary-color); color: white; border: none; padding: 1.2rem 2.5rem; border-radius: 99px; font-weight: bold; font-size: 1.1rem; cursor: pointer; text-decoration: none;">Empezar a Escalar ahora</a>
         </div>
+        
       </div>
     </div>
   `,
   styles: [`
-    .grid-valoraciones-bento {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: minmax(280px, auto);
-      gap: 1.5rem;
-      margin-top: 4rem;
-    }
-    .orb-2 { background: radial-gradient(circle, #fcd34d, transparent); }
-    .bento-lg { grid-column: span 2; grid-row: span 2; }
-    .bento-wide { grid-column: span 2; }
-    .stars { color: #fbbf24; font-size: 1.2rem; }
-    .block { display: block; }
-
-    @media (max-width: 1100px) {
-      .grid-valoraciones-bento { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 700px) {
-      .grid-valoraciones-bento { grid-template-columns: 1fr; }
-      .bento-lg, .bento-wide { grid-column: span 1; grid-row: span 1; }
+    .max-w-3xl { max-width: 48rem; }
+    .mx-auto { margin-inline: auto; }
+    .mt-5 { margin-top: 4rem; }
+    @media (max-width: 900px) {
+      .feature-split { flex-direction: column !important; text-align: center; gap: 2rem !important; }
+      .feature-image { width: 100%; }
+      .mt-4 { flex-direction: column; }
     }
   `]
 })
 export class ValoracionesComponent {}
+
